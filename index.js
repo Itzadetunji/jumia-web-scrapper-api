@@ -7,6 +7,11 @@ const app = express()
 
 const url = 'https://www.theguardian.com/uk'
 
-axios(url);
+axios(url)
+  .then(response => {
+    const html = response.data
+    const $ = cheerio.load(html)
+    ${'.'}
+  })
 
 app.listen(PORT, () => console.log(`Server running on PORT ${PORT}`))
