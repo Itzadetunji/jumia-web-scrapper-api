@@ -11,7 +11,7 @@ axios(url)
   .then(response => {
     const html = response.data
     const $ = cheerio.load(html)
-    ${'.'}
+    $('.fc-item__title', html).each(function)
   })
 
 app.listen(PORT, () => console.log(`Server running on PORT ${PORT}`))
